@@ -31,8 +31,8 @@ export class AngularToolTipComponent implements OnInit {
 
     const toolTipElement = this.el.nativeElement.querySelector('.tooltiptext');
     toolTipElement.style.backgroundColor = this.bgColor;
-    console.log(toolTipElement.style);
     toolTipElement.style.color = this.color;
+
     if(this.position == 'right'){
       this.positionClass = 'tooltiptextRight';
       this.renderer.removeClass(toolTipElement, 'tooltiptext');
@@ -53,7 +53,7 @@ export class AngularToolTipComponent implements OnInit {
     const toolTipElement = this.el.nativeElement.querySelector('.'+this.positionClass);
     toolTipElement.style.visibility = 'visible';
     toolTipElement.style.fontSize = '14px';
-    toolTipElement.style.opacity = 0.8;
+    toolTipElement.style.opacity = 1;
   }
 
   private hideToolTip() {

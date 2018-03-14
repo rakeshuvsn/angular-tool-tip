@@ -20,7 +20,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ```
     class="angularToolTip"
     aToolTip="your tool tip message here"
-    aPosition="left|right|top|bottom"
+    aPosition="left|right|top|bottom" // by default position bottom
     aBgColor="#555" //tool tip display back ground color here by default #555
     aColor="#fff" // tool tip display text color here by default #fff
 ```
