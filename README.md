@@ -58,6 +58,8 @@ for top and bottom positions the tool tip pointer is always middle, if you want 
 
 ```
 
+## Access demo link here https://rakeshuvsn.github.io/angular-tool-tip/
+
 Publish project to NPM:
 
 ## ng-packagr
