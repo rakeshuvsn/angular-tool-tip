@@ -2,31 +2,63 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.3.
 
-## Development server
+## Install:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```
+    npm install angular-tool-tip --save
+    import AngularToolTipModule from 'angular-tool-tip';
+```
 
-## Code scaffolding
+## Usage:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+ ```
+    <button class="angularToolTip" aToolTip="your tool tip message here" aPosition="bottom" aBgColor="#555" aColor="#fff" > your button</button>
+    <a href="#" class="angularToolTip" aToolTip="your tool tip message here" aPosition="bottom" aBgColor="#555" aColor="#fff" > your link here</a>
+ ```
+## Attributes:
 
-## Build
+```
+    class="angularToolTip"
+    aToolTip="your tool tip message here"
+    aPosition="left|right|top|bottom"
+    aBgColor="#555" //tool tip display back ground color here by default #555
+    aColor="#fff" // tool tip display text color here by default #fff
+```
+## Css:
+you can update the css classes by overriding existing classes for poinyter position etc.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+```
+all available css classes:
 
-## Running unit tests
+.tootltiptext // bottom position by default
+.tooltiptextTop // top position
+.tooltiptextRight // right position
+.tooltiptextLeft // left position
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+for example if you want pointer position to be relative to parent of position right tooltip then
 
-## Running end-to-end tests
+.tooltiptextRight::after{
+    top: 25% !important; // adjuist as per your needs by default its 50%;
+}
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+for left position
 
-## Further help
+.tooltiptextLeft::after{
+    top: 25% !important; // adjuist as per your needs by default its 50%;
+}
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+for top and bottom positions the tool tip pointer is always middle, if you want to change you can modify as:
 
-Publist project to NPM:
+.tooltiptextTop::after{
+    left: 25%; // adjuist as per your needs by default its 50%;
+}
+.tooltiptext::after{
+    left: 25%; // adjuist as per your needs by default its 50%;
+}
+
+```
+
+Publish project to NPM:
 
 ## ng-packagr
 ```
